@@ -10,13 +10,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 
-//controller turno A --> switchare al branch master_turnoB o master_turnoC per turno B o C
+//controller turno B --> switchare al branch master_turnoA o master_turnoC per turno A o C
 
 public class FXMLController {
 	
 	private Model model;
 
-    @FXML
+	@FXML
     private ResourceBundle resources;
 
     @FXML
@@ -26,7 +26,7 @@ public class FXMLController {
     private ComboBox<?> boxCategoria;
 
     @FXML
-    private ComboBox<?> boxAnno;
+    private ComboBox<?> boxMese;
 
     @FXML
     private Button btnAnalisi;
@@ -53,7 +53,7 @@ public class FXMLController {
     @FXML
     void initialize() {
         assert boxCategoria != null : "fx:id=\"boxCategoria\" was not injected: check your FXML file 'Crimes.fxml'.";
-        assert boxAnno != null : "fx:id=\"boxAnno\" was not injected: check your FXML file 'Crimes.fxml'.";
+        assert boxMese != null : "fx:id=\"boxMese\" was not injected: check your FXML file 'Crimes.fxml'.";
         assert btnAnalisi != null : "fx:id=\"btnAnalisi\" was not injected: check your FXML file 'Crimes.fxml'.";
         assert boxArco != null : "fx:id=\"boxArco\" was not injected: check your FXML file 'Crimes.fxml'.";
         assert btnPercorso != null : "fx:id=\"btnPercorso\" was not injected: check your FXML file 'Crimes.fxml'.";
