@@ -3,6 +3,7 @@ package it.polito.tdp.crimes;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 
+import it.polito.tdp.crimes.db.EventsDAO;
 import it.polito.tdp.crimes.model.Model;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +20,8 @@ public class EntryPoint extends Application {
 		BorderPane root = loader.load();
 		FXMLController controller = loader.getController();
 		Model model = new Model();
-		controller.setModel(model);
+		EventsDAO dao = new EventsDAO();
+		controller.setModel(model, dao);
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("/styles/Styles.css").toExternalForm());
 		stage.setScene(scene);
